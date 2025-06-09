@@ -5,338 +5,232 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo Archivo Arzobispal</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>    
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-md">
-            <img src="Logo_LIMA.png" class="navbar-brand" width="300px" alt="">
-            <a class="navbar-brand text-white" href="#">Lista de catálogos del archivo arzobispal</a>
+            <a class="navbar-brand" href="#">
+                <img src="Logo_LIMA.png" width="300px" alt="Archivo Arzobispal de Lima">
+            </a>
         </div>
     </nav>
-    <div>&nbsp;</div>
-    <div class="container">
+    <div class="container my-4">
+        <div class="row">
+            <div class="col">
+                <h1 class="mb-4">Lista de catálogos del archivo arzobispal</h1>
 
-        <ul>
-            <li>
-                <a href="https://drive.google.com/file/d/1YoLZgKjYMG0-TDV3sI8bzZTsL4QnYwTO/view?usp=sharing">
-                A.LIBRO_DOCUMENTACIÓN_SOBRE_LA_MUERTE PARA LA WEB
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1ekcFmof8aY4InidzfCElkS8etVaTW7Q9/view?usp=sharing">
-                    ACCIÓN CATÓLICA
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1MooMxJMq_iw-ITkcb4F4EpUhERk-qbY4/view?usp=sharing">
-                BEATERIO DE AMPARADAS
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/12xdWahpCGTihM2FBPltrHf0b8kSHN8LE/view?usp=sharing">
-                BEATERIO DE COPACABANA
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/19jJnCc2bvg1Jf0s4l_qtBZXeNoo9FXYz/view?usp=sharing">
-                BEATERIO DE LA CONCEPCIÓN DE HUÁNUCO
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1ewR58okYof_PkMF_-IPUQHY52hhFXzMg/view?usp=sharing">
-                BEATERIO DE LAS CAMILAS
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1QFOEWLmbwbCe_LUhxyXTdaMs0lWQO6Ko/view?usp=sharing">
-                BEATERIO DE MERCEDARIAS
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1SMFvMa8jV1iyq4VTU67hCxV7R6VnhAVk/view?usp=sharing">
-                BEATERIO DEL PATROCINIO
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1ZcScNFHXl6taMZXrEK49nikr_06jIuqc/view?usp=sharing">
-                CATÁLOGO COFRADÍAS ARCHIVO ARZOBISPAL LIMA PARA LA WEB
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1Jq6kBn-pitnr3PZvcptNWLD2HfDVqnBZ/view?usp=sharing">
-                CATALOGO-PAPELES-IMP.-Y-EMANCIPACION_AAL.WEB
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1daxxaXH6E93E2p7vuI9Ff7IFUmtTliJw/view?usp=sharing">
-                CATALOGO-VIDA-ECLESIASTICA-PERÚ-COLONIAL-Y-REPUBLICANO-TOMO-2-MELECIO-TINEO
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1VH21Sb2qYnPkQ4vaSssWHIIpyX3oTEst/view?usp=sharing">
-                    CAUSAS CRIMINALES DE MATRIMONIOS
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1wFG22U93QJ-M410eP8FPvPppArbyKgNO/view?usp=sharing">
-                    CAUSAS DE ESPONSALES
-                </a>
-            </li>
-            <li>
-                <a href=https://drive.google.com/file/d/14JKx8IpXrYXQIaNR5C08m6ryPe4thCD0/view?usp=sharing">
-                    CAUSAS DE LITIGIOS DE MATRIMONIOS
-                </a>
-            </li>
+                <div class="mb-3">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Buscar catálogos...">
+                </div>
 
+                <div class="list-group" id="catalog-list">
+                    <a href="https://drive.google.com/file/d/1YoLZgKjYMG0-TDV3sI8bzZTsL4QnYwTO/view?usp=sharing" class="list-group-item list-group-item-action">
+                        A.LIBRO_DOCUMENTACIÓN_SOBRE_LA_MUERTE PARA LA WEB
+                    </a>
+                    <a href="https://drive.google.com/file/d/1ekcFmof8aY4InidzfCElkS8etVaTW7Q9/view?usp=sharing" class="list-group-item list-group-item-action">
+                        ACCIÓN CATÓLICA
+                    </a>
+                    <a href="https://drive.google.com/file/d/1MooMxJMq_iw-ITkcb4F4EpUhERk-qbY4/view?usp=sharing" class="list-group-item list-group-item-action">
+                        BEATERIO DE AMPARADAS
+                    </a>
+                    <a href="https://drive.google.com/file/d/12xdWahpCGTihM2FBPltrHf0b8kSHN8LE/view?usp=sharing" class="list-group-item list-group-item-action">
+                        BEATERIO DE COPACABANA
+                    </a>
+                    <a href="https://drive.google.com/file/d/19jJnCc2bvg1Jf0s4l_qtBZXeNoo9FXYz/view?usp=sharing" class="list-group-item list-group-item-action">
+                        BEATERIO DE LA CONCEPCIÓN DE HUÁNUCO
+                    </a>
+                    <a href="https://drive.google.com/file/d/1ewR58okYof_PkMF_-IPUQHY52hhFXzMg/view?usp=sharing" class="list-group-item list-group-item-action">
+                        BEATERIO DE LAS CAMILAS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1QFOEWLmbwbCe_LUhxyXTdaMs0lWQO6Ko/view?usp=sharing" class="list-group-item list-group-item-action">
+                        BEATERIO DE MERCEDARIAS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1SMFvMa8jV1iyq4VTU67hCxV7R6VnhAVk/view?usp=sharing" class="list-group-item list-group-item-action">
+                        BEATERIO DEL PATROCINIO
+                    </a>
+                    <a href="https://drive.google.com/file/d/1ZcScNFHXl6taMZXrEK49nikr_06jIuqc/view?usp=sharing" class="list-group-item list-group-item-action">
+                        CATÁLOGO COFRADÍAS ARCHIVO ARZOBISPAL LIMA PARA LA WEB
+                    </a>
+                    <a href="https://drive.google.com/file/d/1Jq6kBn-pitnr3PZvcptNWLD2HfDVqnBZ/view?usp=sharing" class="list-group-item list-group-item-action">
+                        CATALOGO-PAPELES-IMP.-Y-EMANCIPACION_AAL.WEB
+                    </a>
+                    <a href="https://drive.google.com/file/d/1daxxaXH6E93E2p7vuI9Ff7IFUmtTliJw/view?usp=sharing" class="list-group-item list-group-item-action">
+                        CATALOGO-VIDA-ECLESIASTICA-PERÚ-COLONIAL-Y-REPUBLICANO-TOMO-2-MELECIO-TINEO
+                    </a>
+                    <a href="https://drive.google.com/file/d/1VH21Sb2qYnPkQ4vaSssWHIIpyX3oTEst/view?usp=sharing" class="list-group-item list-group-item-action">
+                        CAUSAS CRIMINALES DE MATRIMONIOS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1wFG22U93QJ-M410eP8FPvPppArbyKgNO/view?usp=sharing" class="list-group-item list-group-item-action">
+                        CAUSAS DE ESPONSALES
+                    </a>
+                    <a href="https://drive.google.com/file/d/14JKx8IpXrYXQIaNR5C08m6ryPe4thCD0/view?usp=sharing" class="list-group-item list-group-item-action">
+                        CAUSAS DE LITIGIOS DE MATRIMONIOS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1FvMWYMhiBAftZwgLOIJXvUR8O8hNTz_2/view?usp=sharing" class="list-group-item list-group-item-action">
+                        COMPAÑIA DE JESUS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1NPjF3foF1l9HuYpa_RCu9TsCn3l8IXn7/view?usp=sharing" class="list-group-item list-group-item-action">
+                        CONGREGACIÓN DE SAN FELIPE NERI
+                    </a>
+                    <a href="https://drive.google.com/file/d/1-w3bRGgymkhaovoX1MuULjYOp261gvGp/view?usp=sharing" class="list-group-item list-group-item-action">
+                        CONGRESO EUCARÍSTICO
+                    </a>
+                    <a href="https://drive.google.com/file/d/1KEGlh3yraf-9p8ktpzUt6w73hQOIfosG/view?usp=sharing" class="list-group-item list-group-item-action">
+                        DIVORCIOS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1WIbZ05r2ylUiJDptCr0KrVhWjFeMCnew/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE LA CARIDAD
+                    </a>
+                    <a href="https://drive.google.com/file/d/1-zSHS1-YWar29X9PQGZdlzcvns8EwdMR/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE CLARISAS CAPUCHINAS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1f-rGa06PySt4miEelLAbO5_Kng1lxBRF/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE LA CONCEPCIÓN
+                    </a>
+                    <a href="https://drive.google.com/file/d/1A_HF-stDRoeod_W2_xLOABMTmPH3f0Ts/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE LA ENCARNACIÓN
+                    </a>
+                    <a href="https://drive.google.com/file/d/17DIjNF_yUV3Rc3Q_bO6tAYXAuOl1EuLz/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE LAS DESCALZAS DE SAN JOSÉ
+                    </a>
+                    <a href="https://drive.google.com/file/d/1-zdw-Kx27M2ys-h4-Yty-9eQS_-i7C3_/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE LAS MERCEDARIAS
+                    </a>
+                    <a href="https://drive.google.com/file/d/19h9JmOvQTuLmYJ8xyF8GdWlGy15j1Rjg/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE LAS NAZARENAS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1-pQeJgL9IoH0wE-pi22yXnGEt84J6AMQ/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE LA SANTÍSIMA TRINIDAD
+                    </a>
+                    <a href="https://drive.google.com/file/d/1QNHuHrCtxWeY4i9qK4BBw9nD-J_N89gN/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE LAS TRINITARIAS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1_gESXgBNzA2yfGpZHW4GGf1PopVpGrTp/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE SANTA CATALINA
+                    </a>
+                    <a href="https://drive.google.com/file/d/11PZ6ZFesiG3j3ochMVeTvpaf-o9sJju6/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE SANTA CLARA
+                    </a>
+                    <a href="https://drive.google.com/file/d/1Y9yAgPygTfj_OzYnQTmbPJ9m6AEaNiV7/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE SANTA ROSA
+                    </a>
+                    <a href="https://drive.google.com/file/d/1WUhLQrXyz_BdvCw6Jpp7hYgdJmGMtPup/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DE SANTA TERESA
+                    </a>
+                    <a href="https://drive.google.com/file/d/117MyhlRus-1fxP_d2N2vx46DNkCH8lAe/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DEL PRADO
+                    </a>
+                    <a href="https://drive.google.com/file/d/170j9EkDnUVnfUJ7xMuXlpU2jAhlf-UGM/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO SAGRADO CORAZÓN DE JESUS - SAN PEDRO
+                    </a>
+                    <a href="https://drive.google.com/file/d/1Co5ZpeNaxvmjytHmv0EN8H619umIHUfj/view?usp=sharing" class="list-group-item list-group-item-action">
+                        MONASTERIO DEL CARMEN
+                    </a>
+                    <a href="https://drive.google.com/file/d/1R0DMyvdkXsBBBKhj1jr-Ft2UdMquMyCx/view?usp=sharing" class="list-group-item list-group-item-action">
+                        NULIDAD DE MATRIMONIOS
+                    </a>
+                    <a href="https://drive.google.com/file/d/11okwQW1MtVC3LuIenB8qJYxD-F3Fye7T/view?usp=sharing" class="list-group-item list-group-item-action">
+                        ORDEN SAN AGUSTÍN ARCHIVO ARZOBISPAL LIMA. WEB
+                    </a>
+                    <a href="https://drive.google.com/file/d/12kgTUInbPRZyiF6kJIuzL7cIZ-3OKYsm/view?usp=sharing" class="list-group-item list-group-item-action">
+                        ORDEN DE BATLEMITAS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1btDU-M3gem2nXzVYWmTAyLvgbEPytzwb/view?usp=sharing" class="list-group-item list-group-item-action">
+                        ORDEN DE BENEDICTINOS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1Ooy7s2d1sMOm0jK0fS2KsVGM6KHBKll8/view?usp=sharing" class="list-group-item list-group-item-action">
+                        ORDEN DE NUESTRA SEÑORA DEL CARMEN - CARMELITAS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1H_CoWOal4-KhW59S577SyGf7V83clbd9/view?usp=sharing" class="list-group-item list-group-item-action">
+                        ORDEN DE NUESTRA SEÑORA DE LA MERCED
+                    </a>
+                    <a href="https://drive.google.com/file/d/14pnpU7BFnW1X1FgWeE4nvxUO12OeMjkg/view?usp=sharing" class="list-group-item list-group-item-action">
+                        ORDEN DE PREDICADORES DE SANTO DOMINGO
+                    </a>
+                    <a href="https://drive.google.com/file/d/11pGf-7srxQhMckcUpvayAzq88r8Yk6NA/view?usp=sharing" class="list-group-item list-group-item-action">
+                        ORDEN DE SAN FRANCISCO
+                    </a>
+                    <a href="https://drive.google.com/file/d/1KxioHsc8LK0AbDex-hEIAUfzoXPuyUja/view?usp=sharing" class="list-group-item list-group-item-action">
+                        ORDEN DE SAN JUAN DE DIOS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1M7IFHlXqwjIN7T7APX4cFE_ixyCUoeJ2/view?usp=sharing" class="list-group-item list-group-item-action">
+                        ORDEN CRUCIFERA DE NUESTRA SEÑORA DE LA BUENAMUERTE
+                    </a>
+                    <a href="https://drive.google.com/file/d/17GtQyjFjMqdlECTGPKTACYm4G6FTkXXP/view?usp=sharing" class="list-group-item list-group-item-action">
+                        ORDEN MÍNIMOS DE SAN FRANCISCO DE PAULA
+                    </a>
+                    <a href="https://drive.google.com/file/d/1XGUxqMxcI4uRZNCOCHws3sF-EqFdv7sg/view?usp=sharing" class="list-group-item list-group-item-action">
+                        REALES CÉDULAS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1VOJN7UUezqGQt0nbc4dvVae9e5AnqebX/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SEMINARIO SANTO TORIBIO
+                    </a>
+                    <a href="https://drive.google.com/file/d/1wxlFAmFBVSO8QYmj1IwpbGcMOfHQVt_I/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE - PRIMICIAS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1GQespUiW9bwMOhXDqJUuntH_09pMmKW9/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE APELACIONES DE AREQUIPA
+                    </a>
+                    <a href="https://drive.google.com/file/d/17zaUfCyQr3ZlQVedoaZjGYxkaGh2ADC5/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE APELACIONES DE CHILE
+                    </a>
+                    <a href="https://drive.google.com/file/d/1zkrtRqoPDpM53F9t266fGGr1mjJkC4fR/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE APELACIONES DE CUZCO
+                    </a>
+                    <a href="https://drive.google.com/file/d/1hGplwcjD9dVCS69qfshtjIafsHQcijnK/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE APELACIONES DE HUAMANGA
+                    </a>
+                    <a href="https://drive.google.com/file/d/1t_5fe5vmA73dP-O9EHEybcbV9t9cK58R/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE APELACIONES DE PANAMÁ
+                    </a>
+                    <a href="https://drive.google.com/file/d/1PAWlTaxNFmP8hkN0ICz9IPGrWedkUFKP/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE APELACIONES DE QUITO
+                    </a>
+                    <a href="https://drive.google.com/file/d/1_AziskPlyBehXh_I3R6dzU2LlEXmDb5T/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE APELACIONES DE TRUJILLO
+                    </a>
+                    <a href="https://drive.google.com/file/d/1md9L6t9RSIMH8Ll1DBBTshg4niRKrY1W/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE APELACIONES DIVERSAS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1iA9NZolUsm03SvMV_I0jv7ZRTzCj74Uy/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE CAPELLANÍAS SIGLOS XIX-XX
+                    </a>
+                    <a href="https://drive.google.com/file/d/13T-6AJ6sKyWxiQubELFJqJ8hdhDgwpBL/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE CAPELLANÍAS SIGLOS XVI-XVII
+                    </a>
+                    <a href="https://drive.google.com/file/d/1LouG7AheFNi4Li1KPnMSoRm-PK1MkONO/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE CAPELLANÍAS SIGLO XVIII
+                    </a>
+                    <a href="https://drive.google.com/file/d/1yt-JRBAqySmyAzrgg8nwxpZCH6S1ICHe/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE CENSOS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1m_tcCLUpteKNxtlyVKYQ__Bz8yKzcXOF/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE- AMANCEBAMIENTOS
+                    </a>
+                    <a href="https://drive.google.com/file/d/1j0LYG-WdlgAvevcVdKxJVINjCz9jHHDg/view?usp=sharing" class="list-group-item list-group-item-action">
+                        SERIE- HECHICERÍAS E IDOLATRÍAS
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-            <li>
-                <a href="https://drive.google.com/file/d/1FvMWYMhiBAftZwgLOIJXvUR8O8hNTz_2/view?usp=sharing">
-                    COMPAÑIA DE JESUS
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1NPjF3foF1l9HuYpa_RCu9TsCn3l8IXn7/view?usp=sharing">
-                    CONGREGACIÓN DE SAN FELIPE NERI
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1-w3bRGgymkhaovoX1MuULjYOp261gvGp/view?usp=sharing">
-                    CONGRESO EUCARÍSTICO
-                </a>
-            </li>
-
-            <li>
-                <a href="https://drive.google.com/file/d/1KEGlh3yraf-9p8ktpzUt6w73hQOIfosG/view?usp=sharing">
-                    DIVORCIOS
-                </a>
-            </li>
-
-            <li>
-                <a href="https://drive.google.com/file/d/1WIbZ05r2ylUiJDptCr0KrVhWjFeMCnew/view?usp=sharing">
-                    MONASTERIO DE LA CARIDAD
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1-zSHS1-YWar29X9PQGZdlzcvns8EwdMR/view?usp=sharing">
-                    MONASTERIO DE CLARISAS CAPUCHINAS
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1f-rGa06PySt4miEelLAbO5_Kng1lxBRF/view?usp=sharing">
-                    MONASTERIO DE LA CONCEPCIÓN
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1A_HF-stDRoeod_W2_xLOABMTmPH3f0Ts/view?usp=sharing">
-                    MONASTERIO DE LA ENCARNACIÓN
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/17DIjNF_yUV3Rc3Q_bO6tAYXAuOl1EuLz/view?usp=sharing">
-                    MONASTERIO DE LAS DESCALZAS DE SAN JOSÉ
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1-zdw-Kx27M2ys-h4-Yty-9eQS_-i7C3_/view?usp=sharing">
-                    MONASTERIO DE LAS MERCEDARIAS
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/19h9JmOvQTuLmYJ8xyF8GdWlGy15j1Rjg/view?usp=sharing">
-                    MONASTERIO DE LAS NAZARENAS
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1-pQeJgL9IoH0wE-pi22yXnGEt84J6AMQ/view?usp=sharing">
-                    MONASTERIO DE LA SANTÍSIMA TRINIDAD
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1QNHuHrCtxWeY4i9qK4BBw9nD-J_N89gN/view?usp=sharing">
-                    MONASTERIO DE LAS TRINITARIAS
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1_gESXgBNzA2yfGpZHW4GGf1PopVpGrTp/view?usp=sharing">
-                    MONASTERIO DE SANTA CATALINA
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/11PZ6ZFesiG3j3ochMVeTvpaf-o9sJju6/view?usp=sharing">
-                    MONASTERIO DE SANTA CLARA
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1Y9yAgPygTfj_OzYnQTmbPJ9m6AEaNiV7/view?usp=sharing">
-                    MONASTERIO DE SANTA ROSA
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1WUhLQrXyz_BdvCw6Jpp7hYgdJmGMtPup/view?usp=sharing">
-                    MONASTERIO DE SANTA TERESA
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/117MyhlRus-1fxP_d2N2vx46DNkCH8lAe/view?usp=sharing">
-                    MONASTERIO DEL PRADO
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/170j9EkDnUVnfUJ7xMuXlpU2jAhlf-UGM/view?usp=sharing">
-                    MONASTERIO SAGRADO CORAZÓN DE JESUS - SAN PEDRO
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1Co5ZpeNaxvmjytHmv0EN8H619umIHUfj/view?usp=sharing">
-                    MONASTERIO DEL CARMEN
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1R0DMyvdkXsBBBKhj1jr-Ft2UdMquMyCx/view?usp=sharing">
-                    NULIDAD DE MATRIMONIOS
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/11okwQW1MtVC3LuIenB8qJYxD-F3Fye7T/view?usp=sharing">
-                ORDEN SAN AGUSTÍN ARCHIVO ARZOBISPAL LIMA. WEB
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/12kgTUInbPRZyiF6kJIuzL7cIZ-3OKYsm/view?usp=sharing">
-                    ORDEN DE BATLEMITAS
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1btDU-M3gem2nXzVYWmTAyLvgbEPytzwb/view?usp=sharing">
-                    ORDEN DE BENEDICTINOS
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1Ooy7s2d1sMOm0jK0fS2KsVGM6KHBKll8/view?usp=sharing">
-                    ORDEN DE NUESTRA SEÑORA DEL CARMEN - CARMELITAS
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1H_CoWOal4-KhW59S577SyGf7V83clbd9/view?usp=sharing">
-                    ORDEN DE NUESTRA SEÑORA DE LA MERCED
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/14pnpU7BFnW1X1FgWeE4nvxUO12OeMjkg/view?usp=sharing">
-                    ORDEN DE PREDICADORES DE SANTO DOMINGO
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/11pGf-7srxQhMckcUpvayAzq88r8Yk6NA/view?usp=sharing">
-                    ORDEN DE SAN FRANCISCO
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1KxioHsc8LK0AbDex-hEIAUfzoXPuyUja/view?usp=sharing">
-                    ORDEN DE SAN JUAN DE DIOS
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1M7IFHlXqwjIN7T7APX4cFE_ixyCUoeJ2/view?usp=sharing">
-                    ORDEN CRUCIFERA DE NUESTRA SEÑORA DE LA BUENAMUERTE
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/17GtQyjFjMqdlECTGPKTACYm4G6FTkXXP/view?usp=sharing">
-                    ORDEN MÍNIMOS DE SAN FRANCISCO DE PAULA
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1XGUxqMxcI4uRZNCOCHws3sF-EqFdv7sg/view?usp=sharing">
-                    REALES CÉDULAS
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1VOJN7UUezqGQt0nbc4dvVae9e5AnqebX/view?usp=sharing">
-                    SEMINARIO SANTO TORIBIO
-                </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1wxlFAmFBVSO8QYmj1IwpbGcMOfHQVt_I/view?usp=sharing">
-                SERIE - PRIMICIAS
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1GQespUiW9bwMOhXDqJUuntH_09pMmKW9/view?usp=sharing">
-                SERIE APELACIONES DE AREQUIPA
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/17zaUfCyQr3ZlQVedoaZjGYxkaGh2ADC5/view?usp=sharing">
-                SERIE APELACIONES DE CHILE
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1zkrtRqoPDpM53F9t266fGGr1mjJkC4fR/view?usp=sharing">
-                SERIE APELACIONES DE CUZCO
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1hGplwcjD9dVCS69qfshtjIafsHQcijnK/view?usp=sharing">
-                SERIE APELACIONES DE HUAMANGA
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1t_5fe5vmA73dP-O9EHEybcbV9t9cK58R/view?usp=sharing">
-                SERIE APELACIONES DE PANAMÁ
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1PAWlTaxNFmP8hkN0ICz9IPGrWedkUFKP/view?usp=sharing">
-                SERIE APELACIONES DE QUITO
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1_AziskPlyBehXh_I3R6dzU2LlEXmDb5T/view?usp=sharing">
-                SERIE APELACIONES DE TRUJILLO
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1md9L6t9RSIMH8Ll1DBBTshg4niRKrY1W/view?usp=sharing">
-                SERIE APELACIONES DIVERSAS
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1iA9NZolUsm03SvMV_I0jv7ZRTzCj74Uy/view?usp=sharing">
-                SERIE CAPELLANÍAS SIGLOS XIX-XX
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/13T-6AJ6sKyWxiQubELFJqJ8hdhDgwpBL/view?usp=sharing">
-                SERIE CAPELLANÍAS SIGLOS XVI-XVII
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1LouG7AheFNi4Li1KPnMSoRm-PK1MkONO/view?usp=sharing">
-                SERIE CAPELLANÍAS SIGLO XVIII
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1yt-JRBAqySmyAzrgg8nwxpZCH6S1ICHe/view?usp=sharing">
-                SERIE CENSOS
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1m_tcCLUpteKNxtlyVKYQ__Bz8yKzcXOF/view?usp=sharing">
-                SERIE- AMANCEBAMIENTOS
-            </a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/file/d/1j0LYG-WdlgAvevcVdKxJVINjCz9jHHDg/view?usp=sharing">
-                SERIE- HECHICERÍAS E IDOLATRÍAS
-            </a>
-            </li>
-        </ul>
-        
-</div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            let filter = this.value.toUpperCase();
+            let list = document.getElementById('catalog-list');
+            let items = list.getElementsByTagName('a');
+            for (let i = 0; i < items.length; i++) {
+                let text = items[i].textContent || items[i].innerText;
+                if (text.toUpperCase().indexOf(filter) > -1) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        });
+    </script>
 </body>
 </html>
